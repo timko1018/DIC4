@@ -1,0 +1,69 @@
+%%
+%% ICEB 2027 full paper -- IEEE conference template
+%% Target: 7th Int. Conf. on Electronic Business and Big Data (ICEB 2027)
+%%         Topic area 2: Technologies and Applications of Big Data and
+%%         Intelligence (Knowledge Base, Recommender Systems, Agentic AI)
+%%
+%% ASSEMBLY PIPELINE STAGE: STEP 000 (Abstract Assembled Template)
+%% ==============================================================================
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{algorithm}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{url}
+
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+
+\begin{document}
+
+\title{Food Guardian: An Inventory-Aware AI Agent for Household Food Management and Waste Reduction}
+
+\author{\IEEEauthorblockN{Wesley Chen}
+\IEEEauthorblockA{\textit{Department of Computer Science and Information Engineering} \\
+\textit{National University}\\
+Taipei, Taiwan \\
+wesley@example.edu}
+\and
+\IEEEauthorblockN{Research Collaborator}
+\IEEEauthorblockA{\textit{Graduate Institute of Data Science and IoT} \\
+\textit{National University}\\
+Taipei, Taiwan \\
+collaborator@example.edu}
+}
+
+\maketitle
+
+% ==============================================================================
+% SECTION ASSEMBLY PIPELINE (INCREMENTAL DRAFTING)
+% ==============================================================================
+
+% [ASSEMBLED] Stage 000: Title, Abstract (A--F), and Index Terms
+\input{sections/000_abstract.tex}
+
+% [STAGED - Next Step: apply 001-introduction]
+% \input{sections/001_introduction.tex}
+
+% [STAGED - Pending Step: apply 002-related-work]
+% \input{sections/002_related_work.tex}
+
+% [STAGED - Pending Step: apply 003-proposed-design]
+% \input{sections/003_proposed_design.tex}
+
+% [STAGED - Pending Step: apply 004-experiment]
+% \input{sections/004_experiments.tex}
+
+% [STAGED - Pending Step: apply 005-conclusion]
+% \input{sections/005_conclusion.tex}
+
+% [STAGED - Pending Step: apply 006-reference]
+% \input{sections/006_references.tex}
+
+\end{document}

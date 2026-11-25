@@ -1,13 +1,10 @@
-# paper-introduction Specification
-
+# Paper Introduction Specification
 ## Purpose
-Connect household waste to the need for batch-level planning.
+Define requirements for the Introduction section, including societal motivation, problem formulation, and research contributions.
 
 ## Requirements
-
-### Requirement: Frame the household inventory problem
-The manuscript SHALL cite the household waste estimate and explain why batch-level inventory matters to recipe feasibility.
-
-#### Scenario: Review introduction
-- **WHEN** the reviewer reads the motivation
-- **THEN** the estimate is attributed and the problem is connected to quantities, dates, and units.
+### Requirement: Introduction with evidence boundaries
+The submission SHALL provide Section I following A to Z tokens A-F with explicit non-overclaim boundaries.
+#### Scenario: Inspect introduction
+- **WHEN** the reviewer reads paper/sections/001_introduction.tex
+- **THEN** motivation, background, challenges, solution, and contributions are detailed.

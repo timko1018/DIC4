@@ -1,4 +1,13 @@
 schema: spec-driven
 context: |
-  DIC4 course project. Deliver an IEEEtran conference draft and Overleaf ZIP.
-  Label the proposed MCP interface and replay evaluation as planned work.
+  本次範圍為 DIC3 Project Proposal Refactor using OpenSpec。
+  文件採繁體中文；需求標頭保留標準 OpenSpec 格式。
+  交付 A–F、5 cores、3 trade-offs、10 details、DESIGN、Introduction、Related Work。
+  系統功能與評估均為提案，不宣稱已實作或已取得研究結果。
+rules:
+  proposal:
+    - 聚焦作業五項要求。
+  specs:
+    - 每項需求包含 WHEN/THEN 驗收情境。
+  tasks:
+    - 只列本次提案重構工作。

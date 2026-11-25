@@ -1,13 +1,10 @@
-# paper-related-work Specification
-
+# Paper Related Work Specification
 ## Purpose
-Distinguish published measurements from the proposed allocation metric.
+Define requirements for the Related Work section and comparative summary table.
 
 ## Requirements
-
-### Requirement: Position the proposed contribution
-The manuscript SHALL distinguish the population-level food waste estimate from the recipe-level metric and cite the MCP protocol revision.
-
-#### Scenario: Review related work
-- **WHEN** the related-work sources are reviewed
-- **THEN** the proposed replay metric is scoped to allocation rather than actual waste reduction.
+### Requirement: Related work and summary table
+The submission SHALL provide Section II with AI/Domain categorization and a comparative Table I.
+#### Scenario: Inspect related work
+- **WHEN** the reviewer reads paper/sections/002_related_work.tex
+- **THEN** Table I summarizes references, datasets, findings, and boundaries.

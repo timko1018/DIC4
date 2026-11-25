@@ -1,13 +1,10 @@
-# paper-abstract Specification
-
+# Paper Abstract Specification
 ## Purpose
-Summarize the proposed method and study status for readers screening the manuscript.
+Define requirements for IEEE conference Title, Abstract, and Keywords.
 
 ## Requirements
-
-### Requirement: Summarize the study boundary
-The manuscript SHALL state the batch allocation method, the proposed MCP interface, and the planned replay.
-
-#### Scenario: Review abstract
-- **WHEN** the abstract and index terms are reviewed
-- **THEN** the reader can identify the proposed method and distinguish it from an executed study.
+### Requirement: IEEE Abstract and Keywords
+The submission SHALL provide a single-paragraph abstract following A-F narrative and six relevant Index Terms.
+#### Scenario: Inspect abstract
+- **WHEN** the reviewer reads paper/sections/000_abstract.tex
+- **THEN** the abstract and IEEEkeywords environments are defined.
