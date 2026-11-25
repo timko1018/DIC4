@@ -10,7 +10,9 @@ Domain knowledge in food preservation is critical for decision safety. The FDA p
 \caption{Summary of Related Work and Research Boundaries (O: Organize)}
 \label{tab:related_work}
 \centering
-\begin{tabular}{lp{1.8cm}p{3.2cm}p{3.2cm}p{2.5cm}p{3.5cm}}
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{1.8cm}*{5}{>{\raggedright\arraybackslash}X}@{}}
 \toprule
 \textbf{Ref} & \textbf{Focus} & \textbf{AI / Algorithmic Method} & \textbf{Domain Knowledge Source} & \textbf{Evaluation Dataset} & \textbf{Key Limitation / Research Boundary} \\
 \midrule
@@ -20,7 +22,7 @@ Wang et al.~\cite{R6_Wang2026} & Nutritional Planning & LLM-RAG dietary recommen
 FDA / FSIS~\cite{R2_FDA2026, R3_FoodSafety2023} & Consumer Safety & Deterministic shelf-life heuristics & Federal food-safety charts & Empirical food preservation guidelines & Static reference charts; requires automated integration for home use. \\
 \textbf{Food Guardian} & \textbf{Inventory-Aware Planning} & \textbf{Hybrid Agent: LLM Planner + Deterministic Verification} & \textbf{Authoritative Cold Storage Charts \& Expiration Rules} & \textbf{30 Standard Scenarios (Proposed)} & \textbf{Focuses on planning and inventory integrity; does not replace lab microbial safety tests.} \\
 \bottomrule
-\end{tabular}
+\end{tabularx}
 \end{table*}
 
 \subsection{Research Hypothesis}

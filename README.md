@@ -2,11 +2,11 @@
 
 這個工作區整理 Food Guardian 的 IEEE 會議論文草稿，以及對應的 OpenSpec 規格。論文探討如何用家庭食材庫存、食譜份量與限制條件規劃餐點。評估章節描述預定的實驗設計。
 
-**從這裡開始** · [閱讀論文 PDF](papers/Food_Guardian__An_Inventory_Aware_AI_Agent_for_Household_Food_Management_and_Waste_Reduction__1_.pdf) · [查看 LaTeX](paper_completed/main.tex) · [瀏覽 OpenSpec](openspec/specs/)
+**從這裡開始** · [閱讀論文 PDF](papers/DIC4-course-draft.pdf) · [下載 Overleaf ZIP](DIC4-overleaf.zip) · [查看 LaTeX](paper_completed/main.tex) · [瀏覽 OpenSpec](openspec/specs/)
 
 ## 01｜論文與 Overleaf
 
-[完整稿的 LaTeX](paper_completed/) 依摘要、緒論、相關研究、設計、評估、結論和參考文獻拆成多個檔案。若要在 Overleaf 編輯，先在儲存庫根目錄用 PowerShell 建立匯入包：
+[完整稿的 LaTeX](paper_completed/) 依摘要、緒論、相關研究、設計、評估、結論和參考文獻拆成多個檔案。可直接下載 [Overleaf 匯入 ZIP](DIC4-overleaf.zip)。修改原始碼後，可在儲存庫根目錄用 PowerShell 重新打包。
 
 ```powershell
 Compress-Archive -Path paper_completed/main.tex,paper_completed/references.bib,paper_completed/sections -DestinationPath DIC4-overleaf.zip -Force
@@ -36,7 +36,7 @@ node tooling/node_modules/@fission-ai/openspec/bin/openspec.js validate --all --
 
 ### 論文初稿瑕疵 vs. 完成版逐頁對照分析
 
-每張圖左側為初稿，右側為完成版。兩版 PDF 可從[論文索引](papers/README.md)開啟。
+下方保留修訂前的四頁對照紀錄。每張圖左側為初稿，右側為當時的完成版。兩版 PDF 可從[論文索引](papers/README.md)開啟。
 
 #### 第 1 頁｜首頁版面
 
