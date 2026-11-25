@@ -36,7 +36,7 @@ node tooling/node_modules/@fission-ai/openspec/bin/openspec.js validate --all --
 
 ### 論文初稿瑕疵 vs. 完成版逐頁對照分析
 
-下方保留修訂前的四頁對照紀錄。每張圖左側為初稿，右側為當時的完成版。對照副本的署名統一為 Tim Ko（Course adaptation），並省略信箱。兩版 PDF 可從[論文索引](papers/README.md)開啟。
+下方保留修訂前的四頁對照紀錄。每張圖左側為初稿，右側為當時的完成版。對照副本已更新左側作者的姓名與信箱。兩版 PDF 可從[論文索引](papers/README.md)開啟。
 
 #### 第 1 頁｜首頁版面
 
