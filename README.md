@@ -61,7 +61,3 @@ node tooling/node_modules/@fission-ai/openspec/bin/openspec.js validate --all --
 ![第 4 頁對照，左為初稿，右為完成版](assets/paper_comparison/comparison_page_4.jpg)
 
 初稿第 4 頁左欄只有 Algorithm 1，右欄留白。完成版左欄仍呈現演算法，右欄接續參考文獻 [4]–[8]，改善末頁的欄位平衡。
-
-### 參考來源
-
-本儲存庫的 Food Guardian 論文、規格與比較素材來自 Wesley0628c 的 DIC4 參考作業，匯入版本為 `d5295e5`。此頁重新整理檔案入口、Overleaf 打包方式和 OpenSpec 檢查步驟。 [參考儲存庫](https://github.com/Wesley0628c/DIC4-overleaf-draft-for-conference-using-MCP-and-openspec)
