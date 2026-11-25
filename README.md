@@ -34,6 +34,34 @@ node tooling/node_modules/@fission-ai/openspec/bin/openspec.js validate --all --
 
 ## 03｜修訂對照與來源
 
-先看[第 2 頁對照](assets/paper_comparison/comparison_page_2.jpg)確認方法章補了哪些換算說明，再看[第 4 頁對照](assets/paper_comparison/comparison_page_4.jpg)觀察雙欄排版如何變動。兩個版本的 PDF 及差異摘要收錄在[論文索引](papers/README.md)。
+### 論文初稿瑕疵 vs. 完成版逐頁對照分析
+
+每張圖左側為初稿，右側為完成版。兩版 PDF 可從[論文索引](papers/README.md)開啟。
+
+#### 第 1 頁｜首頁版面
+
+![第 1 頁對照，左為初稿，右為完成版](assets/paper_comparison/comparison_page_1.jpg)
+
+兩版首頁一致，皆以 IEEE 雙欄呈現標題、摘要、關鍵詞和緒論。緒論包含研究動機、問題定義與主要貢獻。
+
+#### 第 2 頁｜系統設計與份量換算
+
+![第 2 頁對照，左為初稿，右為完成版](assets/paper_comparison/comparison_page_2.jpg)
+
+初稿介紹四個子系統後直接進入決策流程，缺少食譜份量換算的數學定義。完成版補上第 III-B 節與公式（1），說明如何依人數換算食材用量，以及如何處理無法確認的單位。
+
+#### 第 3 頁｜評估設計與參考文獻
+
+![第 3 頁對照，左為初稿，右為完成版](assets/paper_comparison/comparison_page_3.jpg)
+
+兩版都呈現文獻比較與評估設計。初稿的引文 [1]–[8] 集中在第 3 頁底部。完成版加入方法段落後，本頁保留 [1]–[3]，其餘引文移到下一頁。
+
+#### 第 4 頁｜演算法與雙欄平衡
+
+![第 4 頁對照，左為初稿，右為完成版](assets/paper_comparison/comparison_page_4.jpg)
+
+初稿第 4 頁左欄只有 Algorithm 1，右欄留白。完成版左欄仍呈現演算法，右欄接續參考文獻 [4]–[8]，改善末頁的欄位平衡。
+
+### 參考來源
 
 本儲存庫的 Food Guardian 論文、規格與比較素材來自 Wesley0628c 的 DIC4 參考作業，匯入版本為 `d5295e5`。此頁重新整理檔案入口、Overleaf 打包方式和 OpenSpec 檢查步驟。 [參考儲存庫](https://github.com/Wesley0628c/DIC4-overleaf-draft-for-conference-using-MCP-and-openspec)
