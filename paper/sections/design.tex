@@ -1,0 +1,15 @@
+\section{Proposed Design}
+\subsection{Inputs and Eligibility}
+An inventory snapshot contains a version identifier and batches with stable identifiers, canonical ingredient identifiers, recorded amounts, units, and dates. The user supplies the meal time and serving count. Each recipe requirement is converted into a canonical unit using a fixed conversion table and scaled by the ratio of requested to base servings. Requirements with ambiguous units or ingredient mappings receive an explicit unresolved status. Duplicate requirements for a canonical ingredient are combined before allocation.
+
+A batch is eligible when the ingredient matches, its unit can be converted, the quantity is positive, and its recorded date has not passed at the meal time. Missing dates are reported as unresolved inventory. The recorded date is used for planning and does not establish whether an item is safe to consume.
+
+\subsection{Allocation and Ranking}
+For each canonical ingredient, sort eligible batches by recorded date and then by stable identifier. If $d$ denotes the remaining demand and $q_b$ the normalized amount in batch $b$, allocate
+\begin{equation}
+x_b = \min(q_b,d), \qquad d \leftarrow d-x_b.
+\end{equation}
+Stop when demand reaches zero or the eligible batches are exhausted. Each candidate is evaluated against the same snapshot independently. Only fully covered candidates proceed to ranking. For each required ingredient, divide the amount allocated from batches dated within two days of the meal by the total demand for that ingredient. Rank by the mean of these fractions, breaking ties by recipe identifier. This score is dimensionless and gives each required ingredient equal weight.
+
+\subsection{MCP Interface}
+The proposed MCP server exposes two read-only tools. \texttt{get\_snapshot} returns normalized records and the snapshot version. \texttt{plan\_meal} accepts the version, meal time, servings, and recipe identifiers. It returns the allocated quantities, unresolved inputs, shortfalls, and score. A version mismatch returns a stale-snapshot error so the client can request fresh input. The client presents the trace and does not debit stock. For example, a 350\,g requirement supplied by two eligible batches of 200\,g and 300\,g uses 200\,g from the earlier batch and 150\,g from the later batch.

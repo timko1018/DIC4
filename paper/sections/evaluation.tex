@@ -1,0 +1,21 @@
+\section{Planned Evaluation}
+Generate 120 synthetic snapshots with a fixed seed and equal representation of four cases: sufficient stock, insufficient stock, ambiguous units, and stock dated within two days. Evaluate a shared recipe list on each snapshot at the same meal time. Ground-truth eligibility and depletion traces will be checked against hand-worked fixtures. Fixtures also cover tied dates, missing dates, exact matches, mixed units, and stale snapshot versions.
+
+Compare the proposed system with two baselines. An ingredient-presence baseline accepts a recipe when ingredient names appear in the snapshot. A quantity-aware baseline shares eligibility checks and scaling but processes eligible batches in identifier order. When multiple recipes qualify, both baselines choose by stable recipe identifier. Use identical recipe pools across policies and log abstentions separately.
+
+\begin{table}[t]
+\centering
+\caption{Planned replay metrics}
+\begin{tabular}{p{0.31\columnwidth}p{0.59\columnwidth}}
+\hline
+Metric & Measurement \\
+\hline
+Feasibility & Fraction of emitted recommendations fully covered by eligible stock \\
+Coverage & Fraction of snapshots with a recommendation \\
+Near-date use & Mean ingredient-level near-date fraction on paired feasible cases \\
+Trace accuracy & Fraction of fixture outputs matching expected batch IDs, quantities, and status \\
+\hline
+\end{tabular}
+\end{table}
+
+Report per-stratum counts and paired differences on snapshots where the compared policies both emit feasible recommendations. The primary comparison isolates date-aware allocation by also scoring each feasible recipe under both quantity-aware policies before ranking. No replay study has yet been run. Synthetic data cannot establish adoption or reductions in measured household waste.
