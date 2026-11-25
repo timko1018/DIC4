@@ -12,4 +12,21 @@ x_b = \min(q_b,d), \qquad d \leftarrow d-x_b.
 Stop when demand reaches zero or the eligible batches are exhausted. Each candidate is evaluated against the same snapshot independently. Only fully covered candidates proceed to ranking. For each required ingredient, divide the amount allocated from batches dated within two days of the meal by the total demand for that ingredient. Rank by the mean of these fractions, breaking ties by recipe identifier. This score is dimensionless and gives each required ingredient equal weight.
 
 \subsection{MCP Interface}
-The proposed MCP server exposes two read-only tools. \texttt{get\_snapshot} returns normalized records and the snapshot version. \texttt{plan\_meal} accepts the version, meal time, servings, and recipe identifiers. It returns the allocated quantities, unresolved inputs, shortfalls, and score. A version mismatch returns a stale-snapshot error so the client can request fresh input. The client presents the trace and does not debit stock. For example, a 350\,g requirement supplied by two eligible batches of 200\,g and 300\,g uses 200\,g from the earlier batch and 150\,g from the later batch.
+The proposed MCP server exposes two read-only tools. \texttt{get\_snapshot} returns normalized records and the snapshot version. \texttt{plan\_meal} accepts the version, meal time, servings, and recipe identifiers. It returns the allocated quantities, unresolved inputs, shortfalls, and score. A version mismatch returns a stale-snapshot error so the client can request fresh input. The client presents the trace and does not debit stock.
+
+\balance
+\subsection{Worked Allocation Trace}
+Consider a recipe requiring 350\,g at the requested serving count. Batch A contains 200\,g and is dated one day after the meal. Batch B contains 300\,g and is dated three days after it. On snapshot V7, the allocator emits the records in Table~\ref{tab:trace}. The shortfall is zero, and the near-date fraction is $200/350 \approx 0.57$. With snapshot V6, the same request returns the stale-snapshot error before any allocation is attempted.
+\begin{table}[!t]
+\centering
+\caption{Illustrative trace for a 350\,g requirement}
+\label{tab:trace}
+\begin{tabular}{lrrr}
+\hline
+Batch & Available (g) & Allocated (g) & Demand left (g) \\
+\hline
+A & 200 & 200 & 150 \\
+B & 300 & 150 & 0 \\
+\hline
+\end{tabular}
+\end{table}
